@@ -1,2 +1,8 @@
 Simulate Game of Life using OCaml. 
 Reference: http://en.wikipedia.org/wiki/Conway's_Game_of_Life
+v0:
+    standard version: fixed world size, user input = initialization
+
+v1:
+    extendable world
+    final statistics
