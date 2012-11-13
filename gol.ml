@@ -12,7 +12,7 @@ let edge = 5;;
 let hCount = (height_life - edge) / (life_size + edge);;
 let wCount = (width_life - edge) / (life_size + edge);;
 
-let sleepTime = 0.3;;
+let sleepTime = 0.2;;
 
 let color_live = Graphics.black;;
 let color_death = Graphics.white;;
