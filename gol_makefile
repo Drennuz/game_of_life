@@ -1,0 +1,2 @@
+gol: gol.ml
+	ocamlopt -o gol graphics.cmxa unix.cmxa gol.ml
