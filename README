@@ -4,3 +4,9 @@ Extension:
     1. 2 ON states with different colors -> Immigration
     2. Game: to eliminate all opponent's colors
     3. Sound generator
+============
+Version 0 released 14-Nov-2012
+    > To compile: make -f gol_makefile
+    > To run: ./gol arg1 arg2, where: arg1 is the number of lifecycles; arg2 is a float number indicating the initial portion of living cells.
+        For example: ./gol 40 0.8
+
