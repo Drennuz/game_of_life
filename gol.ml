@@ -7,8 +7,8 @@ let total_height = 750;;
 let width_life = 905;;
 let height_life = 565;;
 let height_stat_box = total_height - height_life;;
-let life_size = 15;;
-let edge = 5;;
+let life_size = 10;;
+let edge = 2;;
 let hCount = (height_life - edge) / (life_size + edge);;
 let wCount = (width_life - edge) / (life_size + edge);;
 
@@ -52,7 +52,7 @@ let update_board_graph bd =
             if bd.state.(i).(j).changed = true then
                 (if bd.state.(i).(j).life = 0 then 
                     Graphics.set_color color_death else Graphics.set_color color_live;
-                Graphics.fill_rect (5 + 20 * j) (5 + 20 * i) life_size life_size)
+                Graphics.fill_rect (edge + (edge+life_size) * j) (edge + (edge+life_size) * i) life_size life_size)
         done;
     done
 

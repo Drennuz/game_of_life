@@ -4,6 +4,7 @@ Extension:
     1. 2 ON states with different colors -> Immigration
     2. Game: to eliminate all opponent's colors
     3. Sound generator
+    4. Specify which initial region is life abundant
 ============
 Version 0 released 14-Nov-2012
     > To compile: make -f gol_makefile
