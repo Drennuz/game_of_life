@@ -5,9 +5,15 @@ Extension:
     2. Game: to eliminate all opponent's colors
     3. Sound generator
     4. Specify which initial region is life abundant
+    5. User control
 ============
-Version 0 released 14-Nov-2012
-    > To compile: make -f gol_makefile
-    > To run: ./gol arg1 arg2, where: arg1 is the number of lifecycles; arg2 is a float number indicating the initial portion of living cells.
-        For example: ./gol 40 0.8
+> To compile: make -f gol_makefile
+> To run: ./gol arg1 arg2, where: arg1 is the number of lifecycles; arg2 is a float number indicating the initial portion of living cells.
+    For example: ./gol 40 0.8
+============
+Release notes:
+14-Nov-2012 v0.0
+    > Basic functionality
+25-Nov-2012
+    > Fixed bug; implemented boundary cells
 
