@@ -1,3 +1,6 @@
-gol: gol.ml
+gol: gol.ml gol_oo
 	ocamlopt -o gol graphics.cmxa unix.cmxa gol.ml
+
+gol_oo: gol_oo.ml
+	ocamlopt -o gol_oo graphics.cmxa unix.cmxa gol_oo.ml 
 
