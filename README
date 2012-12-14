@@ -11,7 +11,7 @@ Extension:
 > To compile: make -f gol_makefile. This will compile both source files. 
 > To run gol ve: ./gol arg1 arg2, where: arg1 is the number of lifecycles; arg2 is a float number indicating the initial portion of living cells.
     For example: ./gol 40 0.8
-> To run gol_oo: ./gol arg1, where: arg1 is a float number indicating the initial portion of living cells. This an interactive plot, you press 'n' to see next generation, press 'q' to quit the program.
+> To run gol_oo: ./gol arg1, where: arg1 is a float number indicating the initial portion of living cells. This an interactive plot, you press 'n' to see next generation, press 'q' to quit the program. The latest % of living population will show at command-line.
 ============
 Release notes:
 14-Nov-2012 v0.0

@@ -20,6 +20,11 @@ class virtual absWorld ilen jlen=
                     Graphics.fill_rect (j * cellsize) ((ilen - i - 1) * cellsize) cellsize cellsize
                 done
             done
+        method countLive () = 
+            let count = ref 0 in
+            for i = 0 to (ilen-1) do
+                for j = 0 to (jlen-1) do
+                    if (self#getCell (i,j))#isAlive () then incr count done done; !count 
     end;;
 
 class world il jl = 
@@ -35,8 +40,8 @@ class world il jl =
             if (self#getCell (i,j))#isAlive () then decr count;
             !count
         method nextGen () = 
-            for i = 1 to (il - 2) do
-                for j = 1 to (jl - 2) do
+            for i = 0 to (il - 1) do
+                for j = 0 to (jl - 1) do
                     let cneighbor = self#countNeighbor (i,j) in
                     if ((self#getCell (i,j))#isAlive ()) then (
                         if cneighbor > 3 then self#setCell (i,j) (new cell false);
@@ -64,7 +69,7 @@ let main ilen jlen  =
         while true do
             let e = Graphics.wait_next_event [Graphics.Key_pressed] in match e.Graphics.key with
             'n' -> wd#nextGen (); wd#display () 
-            |'q' -> Graphics.close_graph () 
+            |'q' -> print_float ((float_of_int (wd#countLive ())) /. (float_of_int (ilen*jlen))); Graphics.close_graph ()
             |_ -> () done;;
 
 let wdx = 40;;
