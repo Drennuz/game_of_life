@@ -1,3 +1,12 @@
+(*
+This program implements game of life simulation. 
+To compile: ocamlopt -o gol_oo graphics.cmxa unix.cmxa gol_oo.ml
+To run: ./gol_oo arg1, where arg1 is a floating number indicating initial portion of living cells. Press n for next state, press q to quit
+
+Author: Drennuz
+
+*)
+
 class cell (status: bool) = 
     object
         val alive = status
@@ -54,7 +63,7 @@ class world il jl =
 
 exception End;;
 
-let print_instruction () = print_string "enter initial % population\n";;
+let print_instruction () = print_string "enter initial % population\n, press n for next state, press q to quit";;
 
 let main ilen jlen  = 
     if Array.length (Sys.argv) != 2 then print_instruction ()
